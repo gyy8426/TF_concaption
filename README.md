@@ -1,4 +1,4 @@
-# Convolutional Seq2Seq
+# GCNN for video captioning
 
 This is a tensorflow implementation of the [convolutional seq2seq model](https://arxiv.org/abs/1705.03122) released by Facebook. This model is orignially written via Torch/Lua in [Fairseq](https://github.com/facebookresearch/fairseq). Considering Lua is not that popular as python in the industry and research community, I re-implemente this model with Tensorflow/Python after carefully reading the paper details and Torch/Lua codebase.     
 
