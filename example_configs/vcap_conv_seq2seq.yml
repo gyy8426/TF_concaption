@@ -1,0 +1,25 @@
+model: VCAP_ConvSeq2Seq
+model_params:
+  embedding.dim: 256
+  encoder.class: seq2seq.encoders.ConvEncoderFairseq
+  feature.dim: 2048
+  feature.shape: [30,2048]
+  encoder.params:
+    position_embeddings.enable: False
+    cnn.layers: 4
+    cnn.nhids: 256,256,256,256
+    cnn.kwidths: 3,3,3,3
+  decoder.class: seq2seq.decoders.ConvDecoderFairseq
+  decoder.params:
+    position_embeddings.enable: False
+    cnn.layers: 3
+    cnn.nhids: 256,256,256
+    cnn.kwidths: 3,3,3
+  optimizer.name: Momentum
+  optimizer.params:
+    momentum: 0.99
+    use_nesterov: True     
+  optimizer.learning_rate: 0.25
+  optimizer.clip_gradients: 0.1
+  source.reverse: false
+  target.max_seq_len: 30

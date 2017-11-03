@@ -1,0 +1,13 @@
+default_params: &default_params
+  - separator: " "
+  - postproc_fn: "seq2seq.data.postproc.strip_bpe"
+
+metrics:
+  #- class: VcapBleu1MetricSpec
+  #- class: VcapBleu2MetricSpec
+  #- class: VcapBleu3MetricSpec
+  - class: VcapBleu4MetricSpec
+  #- class: VcapMeteorMetricSpec
+  #- class: VcapCiderMetricSpec
+  #- class: VcapRougeMetricSpec
+  #LogPerplexityMetricSpec 
